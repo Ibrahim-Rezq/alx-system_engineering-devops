@@ -1,2 +1,2 @@
 #!/bin/bash 
-cp --quiet -v ./*.html ../
+cp -u ./*.html ../
