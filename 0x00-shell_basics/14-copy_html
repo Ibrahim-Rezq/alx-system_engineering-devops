@@ -1,9 +1,2 @@
-#!/bin/bash  
-for file in "$(pwd)"/*.html; do     
-	if [ -f "$(dirname "$(pwd)")/$(basename "$file")" ] && [ "$file" -ot "$(dirname "$(pwd)")/$(basename "$file")" ]; then         
-		echo "Skipping $(basename "$file")"     
-	else         
-		cp "$file" "$(dirname "$(pwd)")"         
-		echo "Copied $(basename "$file")"
-	fi
-done	
+#!/bin/bash 
+rsync -u --exclude '*.html' ./ ../
