@@ -1,2 +1,2 @@
 #!/bin/bash
-tr -cs '[:alnum:]' '\n' | cut -c1 | paste -sd ''
+cut -c 1| paste -s -d ''
